@@ -49,6 +49,7 @@ from datetime import datetime
 timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
 save_path = os.path.join(dir_path, timestamp + ".xcf")
 pdb.gimp_xcf_save(0,img,layer,save_path,save_path)
+gimp.message("Python " + sys.version)
 gimp.message("ファイル保存しました。: " + save_path)
 
 #pdb.gimp_displays_flush()
